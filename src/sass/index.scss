@@ -122,6 +122,62 @@ main {
     }
   }
 }
+@keyframes arrow-move {
+  from {
+    transform: none;
+  }
+  12% {
+    transform: translate(0, 0.75rem);
+  }
+  15% {
+    transform: none;
+  }
+  27% {
+    transform: translate(0, 0.75rem);
+  }
+  30% {
+    transform: none;
+  }
+  to {
+    transform: none;
+  }
+}
+#section-works {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4.5em;
+  h3 {
+    position: sticky;
+    top: 2em;
+    background-color: #464123;
+    margin-left: -1em;
+    padding-left: 1em;
+  }
+  .wrap-card {
+    min-height: calc(100vh - $topBarHeight - 2em);
+    .title-card {
+      scroll-snap-align: start;
+      background-color: #464123;
+      margin-left: -1em;
+      padding-left: 1em;
+    }
+    .period-card {
+      position: relative;
+      top: 0;
+      color: #a69c93;
+    }
+    &:not(.last-card)::after {
+      font: var(--fa-font-solid);
+      content: "\f078";
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #92877c;
+      font-size: 2em;
+      bottom: 1em;
+      animation: arrow-move 3s ease-in infinite;
+    }
+  }
+}
 
 .youtube {
   width: 100%;

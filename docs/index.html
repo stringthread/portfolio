@@ -99,9 +99,9 @@
       </div>
 
       <div class="page" id="page2">
-        <section id="section-career">
-          <h2 id="title-career">経歴</h2>
-          <div class="main-content" id="main-career">
+        <section id="section-career-left">
+          <h2 id="title-career-left">学歴</h2>
+          <div class="main-content" id="main-career-left">
             <div class="wrap-card wrap-card-career">
               <h3 class="title-card title-card-career">
                 東京大学工学部システム創成学科
@@ -122,8 +122,12 @@
                 </p>
               </div>
             </div>
+        </section>
+        <section id="section-career-right">
+          <h2 id="title-career-right">職歴</h2>
+          <div class="main-content" id="main-career-right">
             <div class="wrap-card wrap-card-career">
-              <h3 class="title-card title-card-career">株式会社トモノカイ</h3>
+              <h4 class="title-card title-card-career">株式会社トモノカイ</h4>
               <div class="period-card period-card-career">2021/5 - 現在</div>
               <div class="main-card main-card-career">
                 <p>
@@ -140,9 +144,9 @@
       </div>
 
       <div class="page" id="page3">
-        <section id="section-skill">
-          <h2 id="title-skill">スキルレベル</h2>
-          <div id="main-skill" class="main-content">
+        <section id="section-skill-left">
+          <h2 id="title-skill-left">スキルレベル</h2>
+          <div id="main-skill-left" class="main-content">
             <div class="wrap-category-skill">
               <h3 class="title-category-skill">フロントエンド</h3>
               <div class="wrap-record-skill">
@@ -169,6 +173,20 @@
               </div>
             </div>
             <div class="wrap-category-skill">
+              <h3 class="title-category-skill">その他プログラム関係</h3>
+              <div class="wrap-record-skill">
+                <h4 class="title-record-skill">C++</h4>
+                <div class="description-record-skill">
+                  普通に書けます。音ゲー作った
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-skill-right">
+          <h2 id="title-skill-right">スキルレベル</h2>
+          <div id="main-skill-right" class="main-content">
+            <div class="wrap-category-skill">
               <h3 class="title-category-skill">バックエンド</h3>
               <div class="wrap-record-skill">
                 <h4 class="title-record-skill">Python</h4>
@@ -191,15 +209,6 @@
               <div class="wrap-record-skill">
                 <h4 class="title-record-skill">MySQL</h4>
                 <div class="description-record-skill">一通り使えます</div>
-              </div>
-            </div>
-            <div class="wrap-category-skill">
-              <h3 class="title-category-skill">その他プログラム関係</h3>
-              <div class="wrap-record-skill">
-                <h4 class="title-record-skill">C++</h4>
-                <div class="description-record-skill">
-                  普通に書けます。音ゲー作った
-                </div>
               </div>
             </div>
             <div class="wrap-category-skill">
@@ -228,54 +237,32 @@
           <div class="main-content" id="main-works">
             <div class="wrap-category-works">
               <h3 class="title-category-works">アプリケーション実装</h3>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">e-Flowsheet</h3>
+              <div class="wrap-card wrap-card-works" data-id="1">
+                <h4 class="title-card title-card-works">e-Flowsheet</h4>
                 <div class="period-card period-card-works">2021/9 - 2023/2</div>
                 <div class="main-card main-card-works">
                   <p>
                     競技ディベートで議論を記録するために最適化されたメモアプリケーションです。論点を入れ子状に管理するほか、反論と対象の関係を記録できます。
                   </p>
                   <div class="link-works">
-                    <a href="https://stringthread.github.io/flowsheet/"
-                      >アプリケーション</a
-                    >
-                    <a href="https://github.com/stringthread/flowsheet/"
-                      >ソースコード</a
-                    >
+                    <a href="https://stringthread.github.io/flowsheet/">アプリケーション</a>
+                    <a href="https://github.com/stringthread/flowsheet/">ソースコード</a>
                   </div>
                   <div class="tech-stack-works">
-                    <span class="word-tech-stack-works">TypeScript</span
-                    ><span class="word-tech-stack-works">React</span
-                    ><span class="word-tech-stack-works">Redux</span>
-                  </div>
-                </div>
-                <div class="images-card">
-                  <img
-                    src="img/e-Flowsheet.jpg"
-                    alt="e-Flowsheet画面サンプル"
-                  />
-                  <div class="youtube">
-                    <iframe
-                      width="1280"
-                      height="693"
-                      src="https://www.youtube.com/embed/Xe7SfJouB7M"
-                      title="e-Flowsheet チュートリアル"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
+                    <span class="word-tech-stack-works">TypeScript</span>
+                    <span class="word-tech-stack-works">React</span>
+                    <span class="word-tech-stack-works">Redux</span>
                   </div>
                 </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">Colorful Hexa</h3>
+              <div class="wrap-card wrap-card-works" data-id="2">
+                <h4 class="title-card title-card-works">Colorful Hexa</h4>
                 <div class="period-card period-card-works">
                   2018/2 - 2018/11
                 </div>
                 <div class="main-card main-card-works">
                   <p>
-                    Windows向け音楽ゲーム「Colorful
-                    Hexa」を作成しました。2018年にアーケードゲームとして3日間公開し、多数のプレイヤーを迎えることができました。
+                    Windows向け音楽ゲーム「Colorful&nbsp;Hexa」を作成しました。2018年にアーケードゲームとして3日間公開し、多数のプレイヤーを迎えることができました。
                   </p>
                   <p>
                     チームメンバー6名による製作であり、私は筐体・画面デザインとコーディングを担当しました。
@@ -291,45 +278,9 @@
                     ><span class="word-tech-stack-works">SDL</span>
                   </div>
                 </div>
-                <div class="images-card">
-                  <img
-                    src="img/colorfulHexa画面.png"
-                    alt="ColorfulHexa画面サンプル"
-                  />
-                  <img
-                    src="img/colorfulHexa筐体.jpg"
-                    alt="ColorfulHexa筐体サンプル"
-                  />
-                  <blockquote class="twitter-tweet">
-                    <p lang="ja" dir="ltr">
-                      さらに今日は、Colorful
-                      Hexaのチュートリアル動画も公開いたします！明後日に向けて、ぜひご活用ください！<br /><br />↓チュートリアル動画はこちら<a
-                        href="https://twitter.com/hashtag/%E7%AD%91%E9%A7%92%E6%96%87%E5%8C%96%E7%A5%AD2018?src=hash&amp;ref_src=twsrc%5Etfw"
-                        >#筑駒文化祭2018</a
-                      >
-                      <a
-                        href="https://twitter.com/hashtag/Colorful_Hexa?src=hash&amp;ref_src=twsrc%5Etfw"
-                        >#Colorful_Hexa</a
-                      >
-                      <a href="https://t.co/oQM1xvDsU1"
-                        >pic.twitter.com/oQM1xvDsU1</a
-                      >
-                    </p>
-                    &mdash; Colorful Hexa公式 (@Colorful_Hexa)
-                    <a
-                      href="https://twitter.com/Colorful_Hexa/status/1057648294870962177?ref_src=twsrc%5Etfw"
-                      >October 31, 2018</a
-                    >
-                  </blockquote>
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charset="utf-8"
-                  ></script>
-                </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">Human as a Sensor</h3>
+              <div class="wrap-card wrap-card-works" data-id="3">
+                <h4 class="title-card title-card-works">Human as a Sensor</h4>
                 <div class="period-card period-card-works">
                   2021/10 - 2021/11
                 </div>
@@ -359,15 +310,9 @@
                     >
                   </div>
                 </div>
-                <div class="images-card">
-                  <img
-                    src="img/HaaS_撮影映像.png"
-                    alt="Human as a Sensor画像"
-                  />
-                </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">簡易POSシステム</h3>
+              <div class="wrap-card wrap-card-works" data-id="4">
+                <h4 class="title-card title-card-works">簡易POSシステム</h4>
                 <div class="period-card period-card-works">2017/5 - 2017/7</div>
                 <div class="main-card main-card-works">
                   <p>
@@ -389,8 +334,8 @@
                   </div>
                 </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">Discord Bot</h3>
+              <div class="wrap-card wrap-card-works" data-id="5">
+                <h4 class="title-card title-card-works">Discord Bot</h4>
                 <div class="period-card period-card-works">2020/6 - 2020/9</div>
                 <div class="main-card main-card-works">
                   <p>ボイスチャットアプリDiscord上のBot3種を作成しました。</p>
@@ -434,20 +379,14 @@
                     ><span class="word-tech-stack-works">CentOS7</span>
                   </div>
                 </div>
-                <div class="images-card">
-                  <img
-                    src="img/discordBotIcons.png"
-                    alt="Discord Botアイコン"
-                  />
-                </div>
               </div>
             </div>
             <div class="wrap-category-works">
               <h3 class="title-category-works">グラフィックデザイン</h3>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+              <div class="wrap-card wrap-card-works" data-id="6">
+                <h4 class="title-card title-card-works">
                   演劇「過ぎ行く日々は透明な白」広報デザイン
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">
                   2016/8 - 2016/10
                 </div>
@@ -456,33 +395,20 @@
                     演劇「過ぎ行く日々は透明な白」の広報に用いるポスターや頒布物のデザインを行いました。
                   </p>
                 </div>
-                <div class="images-card">
-                  <img
-                    src="img/過ぎ行く日々は透明な白_ポスター.jpg"
-                    alt="過ぎ行く日々は透明な白 ポスター"
-                  />
-                </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+              <div class="wrap-card wrap-card-works" data-id="7">
+                <h4 class="title-card title-card-works">
                   動画放映企画「2‣2」ロゴ
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">2017/6 - 2017/9</div>
                 <div class="main-card main-card-works">
                   <p>動画放映企画「2‣2」のロゴを作成しました。</p>
                 </div>
-                <div class="images-card">
-                  <img src="img/2-2_ロゴイメージ.jpg" alt="2-2ロゴ" />
-                  <img
-                    src="img/2-2_ムービングロゴ.gif"
-                    alt="2-2ムービングロゴ"
-                  />
-                </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+              <div class="wrap-card wrap-card-works" data-id="8">
+                <h4 class="title-card title-card-works">
                   謎解き企画「こまなぞ」
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">
                   2018/9 - 2018/10
                 </div>
@@ -490,15 +416,11 @@
                   <p>謎解き企画「こまなぞ」のデザインを担当しました。</p>
                   <p>ロゴ・冊子・クリアファイルを作成しました</p>
                 </div>
-                <div class="images-card">
-                  <img src="img/こまなぞロゴ.jpg" alt="こまなぞロゴ" />
-                  <img src="img/こまなぞファイル.jpg" alt="こまなぞファイル" />
-                </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+              <div class="wrap-card wrap-card-works" data-id="9">
+                <h4 class="title-card title-card-works">
                   音楽ゲーム「Colorful Hexa」ロゴ・画面デザイン
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">
                   2018/9 - 2018/10
                 </div>
@@ -508,18 +430,14 @@
                     Hexa」で、ロゴと画面デザインを行いました。
                   </p>
                 </div>
-                <div class="images-card">
-                  <img src="img/ColorfulHexaロゴ.jpg" alt="Colorful Hexaロゴ" />
-                  <img src="img/colorfulHexa画面.png" alt="Colorful Hexa画面" />
-                </div>
               </div>
             </div>
             <div class="wrap-category-works">
               <h3 class="title-category-works">研究実績</h3>
               <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+                <h4 class="title-card title-card-works">
                   製品情報のテキストマイニングによる設計開発・保守のナレッジマネジメント（製品不具合のテキストマイニングによる故障事象分類）
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">2022/9</div>
                 <div class="main-card main-card-works">
                   <p>
@@ -537,10 +455,10 @@
                   </p>
                 </div>
               </div>
-              <div class="wrap-card wrap-card-works">
-                <h3 class="title-card title-card-works">
+              <div class="wrap-card wrap-card-works last-card">
+                <h4 class="title-card title-card-works">
                   自動車不具合メカニズムのネットワーク構造化とテキストマイニングによる自動生成
-                </h3>
+                </h4>
                 <div class="period-card period-card-works">2023/3</div>
                 <div class="main-card main-card-works">
                   <p>卒業論文</p>
@@ -555,6 +473,100 @@
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-works-right">
+          <h2>実績 - 画像</h2>
+          <div class="main-content">
+            <div class="images-card" data-id="1">
+              <img
+                src="img/e-Flowsheet.jpg"
+                alt="e-Flowsheet画面サンプル"
+              />
+              <div class="youtube">
+                <iframe
+                  width="1280"
+                  height="693"
+                  src="https://www.youtube.com/embed/Xe7SfJouB7M"
+                  title="e-Flowsheet チュートリアル"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="images-card" data-id="2">
+              <img
+                src="img/colorfulHexa画面.png"
+                alt="ColorfulHexa画面サンプル"
+              />
+              <img
+                src="img/colorfulHexa筐体.jpg"
+                alt="ColorfulHexa筐体サンプル"
+              />
+              <blockquote class="twitter-tweet">
+                <p lang="ja" dir="ltr">
+                  さらに今日は、Colorful
+                  Hexaのチュートリアル動画も公開いたします！明後日に向けて、ぜひご活用ください！<br /><br />↓チュートリアル動画はこちら<a
+                    href="https://twitter.com/hashtag/%E7%AD%91%E9%A7%92%E6%96%87%E5%8C%96%E7%A5%AD2018?src=hash&amp;ref_src=twsrc%5Etfw"
+                    >#筑駒文化祭2018</a
+                  >
+                  <a
+                    href="https://twitter.com/hashtag/Colorful_Hexa?src=hash&amp;ref_src=twsrc%5Etfw"
+                    >#Colorful_Hexa</a
+                  >
+                  <a href="https://t.co/oQM1xvDsU1"
+                    >pic.twitter.com/oQM1xvDsU1</a
+                  >
+                </p>
+                &mdash; Colorful Hexa公式 (@Colorful_Hexa)
+                <a
+                  href="https://twitter.com/Colorful_Hexa/status/1057648294870962177?ref_src=twsrc%5Etfw"
+                  >October 31, 2018</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+            <div class="images-card" data-id="3">
+              <img
+                src="img/HaaS_撮影映像.png"
+                alt="Human as a Sensor画像"
+              />
+            </div>
+            <div class="images-card" data-id="4">
+            </div>
+            <div class="images-card" data-id="5">
+              <img
+                src="img/discordBotIcons.png"
+                alt="Discord Botアイコン"
+              />
+            </div>
+            <div class="images-card" data-id="6">
+              <img
+                src="img/過ぎ行く日々は透明な白_ポスター.jpg"
+                alt="過ぎ行く日々は透明な白 ポスター"
+              />
+            </div>
+            <div class="images-card" data-id="7">
+              <img src="img/2-2_ロゴイメージ.jpg" alt="2-2ロゴ" />
+              <img
+                src="img/2-2_ムービングロゴ.gif"
+                alt="2-2ムービングロゴ"
+              />
+            </div>
+            <div class="images-card" data-id="8">
+              <img src="img/こまなぞロゴ.jpg" alt="こまなぞロゴ" />
+              <img src="img/こまなぞファイル.jpg" alt="こまなぞファイル" />
+            </div>
+            <div class="images-card" data-id="9">
+              <img src="img/ColorfulHexaロゴ.jpg" alt="Colorful Hexaロゴ" />
+              <img src="img/colorfulHexa画面.png" alt="Colorful Hexa画面" />
             </div>
           </div>
         </section>
