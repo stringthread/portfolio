@@ -1,0 +1,8 @@
+body {
+  background-color: bisque;
+  color: #333;
+  & h1 {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+}

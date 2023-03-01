@@ -1,0 +1,32 @@
+{
+  "name": "stringthread.github.io",
+  "version": "1.0.0",
+  "description": "Stringthread portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx webpack serve --mode=development",
+    "build": "npx webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stringthread/stringthread.github.io.git"
+  },
+  "author": "Yuito Sakata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stringthread/stringthread.github.io/issues"
+  },
+  "homepage": "https://stringthread.github.io",
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
