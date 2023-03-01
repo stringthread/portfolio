@@ -1,11 +1,128 @@
+$bgColor: #291e17;
+$fgColor: #bfb9b3;
+$topBarHeight: 2rem;
+$sidebarWidth: 3rem;
+$explorerWidth: 12rem;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: bisque;
-  color: #333;
-  & h1 {
-    font-size: 2rem;
-    text-decoration: underline;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: $bgColor;
+  color: $fgColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+}
+#topbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: $topBarHeight;
+  background-color: #3d2e20;
+  z-index: 100;
+}
+#sidebar-contacts {
+  position: fixed;
+  left: 0;
+  top: $topBarHeight;
+  padding: 0.5em;
+  width: $sidebarWidth;
+  background-color: #66492d;
+  height: calc(100vh - $topBarHeight);
+  & .icon-record-contact {
+    height: 1em;
+    font-size: 2em;
+    margin: 0.25em 0;
   }
 }
+#explorer {
+  position: fixed;
+  left: $sidebarWidth;
+  top: $topBarHeight;
+  width: $explorerWidth;
+  height: calc(100vh - $topBarHeight);
+  padding: 0;
+  overflow: hidden;
+  background-color: #3d2e20;
+  #top-explorer {
+    background-color: #4b3f34;
+    padding: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 0.9em;
+    &::before {
+      font: var(--fa-font-solid);
+      content: "\f078";
+      position: relative;
+      left: -0.5em;
+      color: #92877c;
+    }
+  }
+  a {
+    display: block;
+    padding: 0;
+    padding-left: 2em;
+    color: $fgColor;
+    text-decoration-line: none;
+    &:hover {
+      background-color: #563d0b;
+    }
+  }
+}
+
+main {
+  position: relative;
+  left: calc($sidebarWidth + $explorerWidth);
+  top: $topBarHeight;
+  width: calc(100vw - $sidebarWidth - $explorerWidth);
+  height: calc(100vh - $topBarHeight);
+  overflow: hidden;
+}
+
+.page {
+  display: grid;
+  height: calc(100vh - $topBarHeight);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(calc(100vh - $topBarHeight), auto);
+  section {
+    position: relative;
+    height: 100%;
+    padding-left: 1em;
+    overflow-y: scroll;
+    h1,
+    h2 {
+      display: inline-block;
+      background-color: #4c3f34;
+      margin: 0;
+      font-size: 1em;
+      padding: 0.3em 1em;
+      padding-right: 2em;
+      margin-left: -1em;
+      position: sticky;
+      top: 0;
+      border-radius: 0 0.25em 0 0;
+      &::after {
+        font: var(--fa-font-solid);
+        content: "\f00d";
+        position: relative;
+        left: 1em;
+        color: #92877c;
+      }
+    }
+  }
+}
+
 .youtube {
   width: 100%;
   aspect-ratio: 16 / 9;
