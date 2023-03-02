@@ -1,0 +1,55 @@
+@use "./variables.scss" as var;
+
+.wrap-card {
+  position: relative;
+  margin-bottom: 2em;
+  & > *:not(.wrap-card) {
+    padding-left: 1rem;
+  }
+}
+.title-card,
+#section-works h3 {
+  position: sticky;
+  top: 0;
+  min-height: var.$titleHeight;
+  height: auto;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: max(calc((var.$titleHeight - 1.25em) / 2), 0.4em) 0;
+  padding-left: 1rem;
+  background-color: #464123;
+  border-bottom: solid 2px var.$bgColor;
+  z-index: 1;
+}
+.title-card-skill,
+.period-card {
+  background-color: #382d1f;
+  color: #a69c93ff;
+  margin-left: 4px;
+  margin-bottom: 0;
+  border-left: 4px dotted #1b81a8;
+  padding: 0.5em 0;
+  z-index: 0;
+}
+#main-skill-left,
+#main-skill-right {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: var.$titleHeight;
+}
+.title-card-skill {
+  scroll-snap-align: start;
+}
+.main-card {
+  margin: 0 1rem 0 4px;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 4px solid #487e02;
+  > p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

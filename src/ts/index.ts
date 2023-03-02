@@ -1,5 +1,6 @@
 import "../sass/reset.scss";
 import "../sass/main.scss";
+import "../sass/card.scss";
 import "../sass/works.scss";
 import "../sass/frames.scss";
 import "../sass/swiper.scss";
