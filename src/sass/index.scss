@@ -183,14 +183,26 @@ main {
   scroll-snap-type: y mandatory;
   scroll-padding-top: calc($topBarHeight);
   .images-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     scroll-snap-align: start;
+    width: 100%;
+    height: calc(100vh - $topBarHeight - 2em);
+    margin-bottom: 2em;
+  }
+  #empty-image-content {
+    width: 80%;
+    height: 50%;
+    font-size: 2em;
+    background-color: #464123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .swiper {
   overflow: hidden;
-  width: 100%;
-  height: calc(100vh - $topBarHeight - 2em);
-  margin-bottom: 2em;
 
   .swiper-wrapper {
     display: flex;

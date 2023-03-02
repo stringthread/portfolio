@@ -12,16 +12,14 @@ const setScrollSync = () => {
     console.error("スクロール同期対象の要素がありません");
     return;
   }
-  const sectionLeftItemsMap = new Map<string, HTMLElement>(
-    Array.from(
-      sectionLeft.querySelectorAll(".wrap-card"),
-      (e) =>
-        [e.getAttribute("data-id"), e] as const satisfies readonly [
-          string | null,
-          HTMLElement
-        ]
-    ).filter((v): v is readonly [string, HTMLElement] => !!v[0])
-  );
+  const sectionLeftItems = Array.from(
+    sectionLeft.querySelectorAll(".wrap-card"),
+    (e) =>
+      [e.getAttribute("data-id"), e] as const satisfies readonly [
+        string | null,
+        HTMLElement
+      ]
+  ).filter((v): v is readonly [string, HTMLElement] => !!v[0]);
   const sectionRightItemsMap = new Map<string, HTMLElement>(
     Array.from(
       sectionRight.querySelectorAll(".images-card"),
@@ -35,12 +33,11 @@ const setScrollSync = () => {
   sectionLeft.addEventListener(
     "scroll",
     () => {
-      for (const k of sectionLeftItemsMap.keys()) {
-        const element = sectionLeftItemsMap.get(k);
-        if (element === undefined) continue;
-        const clientRect = element.getBoundingClientRect();
+      for (const [k, e] of sectionLeftItems) {
+        const clientRect = e.getBoundingClientRect();
         if (clientRect.top > 0 && clientRect.top < sectionLeft.clientHeight) {
-          const syncElement = sectionRightItemsMap.get(k);
+          const syncElement =
+            sectionRightItemsMap.get(k) ?? sectionRightItemsMap.get("empty");
           syncElement?.scrollIntoView();
         }
       }
