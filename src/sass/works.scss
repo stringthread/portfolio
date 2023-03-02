@@ -4,16 +4,16 @@
   from {
     transform: none;
   }
-  12% {
-    transform: translate(0, 0.75rem);
-  }
-  15% {
-    transform: none;
-  }
-  27% {
+  18% {
     transform: translate(0, 0.75rem);
   }
   30% {
+    transform: none;
+  }
+  48% {
+    transform: translate(0, 0.75rem);
+  }
+  60% {
     transform: none;
   }
   to {
@@ -32,17 +32,20 @@
     font-size: 1em;
   }
   .wrap-card {
-    min-height: calc(100vh - var.$tabHeight);
+    min-height: calc(
+      100vh - var.$topBarHeight - var.$tabHeight - var.$titleHeight
+    );
     &:not(.last-card)::after {
       font: var(--fa-font-solid);
       content: "\f078";
       display: block;
-      width: 100%;
-      text-align: center;
+      width: 1em;
       color: #92877c;
       font-size: 2em;
+      position: absolute;
       bottom: 1em;
-      animation: arrow-move 3s ease-in infinite;
+      right: 1em;
+      animation: arrow-move 2s ease-in infinite;
     }
   }
 }
