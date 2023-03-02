@@ -49,11 +49,26 @@
     }
   }
 }
+
+@keyframes border-blink {
+  from {
+    border-right: solid 2px #92877c;
+  }
+  48% {
+    border-right: solid 2px #92877c;
+  }
+  52% {
+    border-right: solid 2px transparent;
+  }
+  to {
+    border-right: solid 2px transparent;
+  }
+}
 .word-tech-stack-works {
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #5c554b;
+  padding: 0.2rem 0.1rem;
+  background-color: #565c4b;
   margin: 0 4px;
+  animation: border-blink 1s infinite;
 }
 
 #section-works-right > .main-content {
