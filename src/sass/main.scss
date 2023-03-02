@@ -20,7 +20,7 @@ main {
     height: 100%;
     overflow: hidden;
     .main-content {
-      height: 100%;
+      height: calc(100% - var.$tabHeight);
       padding-left: 1em;
       overflow-y: scroll;
     }
@@ -51,9 +51,7 @@ main {
 
 .wrap-card {
   position: relative;
-  &:not(:last-child) {
-    margin-bottom: 2em;
-  }
+  margin-bottom: 2em;
 }
 .title-card,
 #section-works h3 {
