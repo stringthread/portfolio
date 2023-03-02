@@ -1,0 +1,72 @@
+@use "./variables.scss" as var;
+
+@keyframes arrow-move {
+  from {
+    transform: none;
+  }
+  12% {
+    transform: translate(0, 0.75rem);
+  }
+  15% {
+    transform: none;
+  }
+  27% {
+    transform: translate(0, 0.75rem);
+  }
+  30% {
+    transform: none;
+  }
+  to {
+    transform: none;
+  }
+}
+
+#main-works {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: calc(var.$titleHeight);
+  .title-card {
+    position: static;
+    scroll-snap-align: start;
+    height: auto;
+    min-height: var.$titleHeight;
+    font-size: 1em;
+  }
+  .wrap-card {
+    min-height: calc(100vh - var.$tabHeight);
+    &:not(.last-card)::after {
+      font: var(--fa-font-solid);
+      content: "\f078";
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #92877c;
+      font-size: 2em;
+      bottom: 1em;
+      animation: arrow-move 3s ease-in infinite;
+    }
+  }
+}
+
+#section-works-right > .main-content {
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  height: calc(100vh - var.$topBarHeight - var.$tabHeight);
+  .images-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2em;
+  }
+  #empty-image-content {
+    width: 80%;
+    height: 50%;
+    font-size: 2em;
+    background-color: #464123;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

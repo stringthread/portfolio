@@ -1,4 +1,8 @@
-import "../sass/index.scss";
+import "../sass/reset.scss";
+import "../sass/main.scss";
+import "../sass/works.scss";
+import "../sass/frames.scss";
+import "../sass/swiper.scss";
 import type {} from "typed-query-selector";
 import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";

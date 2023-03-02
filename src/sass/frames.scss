@@ -1,0 +1,68 @@
+@use "./variables.scss" as var;
+
+body {
+  background-color: var.$bgColor;
+  color: var.$fgColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+}
+#topbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: var.$topBarHeight;
+  background-color: #3d2e20;
+  z-index: 100;
+}
+#sidebar-contacts {
+  position: fixed;
+  left: 0;
+  top: var.$topBarHeight;
+  padding: 0.5em;
+  width: var.$sidebarWidth;
+  background-color: #66492d;
+  height: calc(100vh - var.$topBarHeight);
+  & .icon-record-contact {
+    height: 1em;
+    font-size: 2em;
+    margin: 0.25em 0;
+  }
+}
+#explorer {
+  position: fixed;
+  left: var.$sidebarWidth;
+  top: var.$topBarHeight;
+  width: var.$explorerWidth;
+  height: calc(100vh - var.$topBarHeight);
+  padding: 0;
+  overflow: hidden;
+  background-color: #3d2e20;
+  #top-explorer {
+    background-color: #4b3f34;
+    padding: 0;
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 0.9em;
+    &::before {
+      font: var(--fa-font-solid);
+      content: "\f078";
+      position: relative;
+      left: -0.5em;
+      color: #92877c;
+    }
+  }
+  a {
+    display: block;
+    padding: 0;
+    padding-left: 2em;
+    color: var.$fgColor;
+    text-decoration-line: none;
+    &:hover {
+      background-color: #563d0b;
+    }
+  }
+}

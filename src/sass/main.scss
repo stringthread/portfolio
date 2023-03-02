@@ -1,0 +1,77 @@
+@use "./variables.scss" as var;
+
+main {
+  position: relative;
+  left: calc(var.$sidebarWidth + var.$explorerWidth);
+  top: var.$topBarHeight;
+  width: calc(100vw - var.$sidebarWidth - var.$explorerWidth);
+  height: calc(100vh - var.$topBarHeight);
+  overflow: hidden;
+}
+
+.page {
+  display: grid;
+  height: calc(100vh - var.$topBarHeight);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(calc(100vh - var.$topBarHeight), auto);
+  section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .main-content {
+      height: 100%;
+      padding-left: 1em;
+      overflow-y: scroll;
+    }
+    h1,
+    h2 {
+      display: inline-block;
+      background-color: #4c3f34;
+      margin: 0;
+      height: var.$tabHeight;
+      font-size: 1em;
+      line-height: 1;
+      padding: calc((var.$tabHeight - 1em) / 2) 1rem;
+      padding-right: 2rem;
+      position: sticky;
+      top: 0;
+      border-radius: 0 0.25rem 0 0;
+      border-bottom: 2px solid var.$bgColor;
+      &::after {
+        font: var(--fa-font-solid);
+        content: "\f00d";
+        position: relative;
+        left: 1rem;
+        color: #bfb9b3;
+      }
+    }
+  }
+}
+
+.wrap-card {
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
+}
+.title-card,
+#section-works h3 {
+  position: sticky;
+  top: 0;
+  height: var.$titleHeight;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 0;
+  margin-left: -1rem;
+  padding: calc((var.$titleHeight - 1.25em) / 2) 0;
+  padding-left: 1rem;
+  background-color: #464123;
+  border-bottom: solid 2px var.$bgColor;
+  z-index: 1;
+}
+.period-card {
+  position: relative;
+  top: 0;
+  color: #a69c93;
+}
