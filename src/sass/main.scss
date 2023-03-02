@@ -28,12 +28,14 @@ main {
     h2 {
       display: inline-block;
       background-color: #4c3f34;
+      position: relative;
       margin: 0;
+      min-width: 8em;
       height: var.$tabHeight;
       font-size: 1em;
       line-height: 1;
       padding: calc((var.$tabHeight - 1em) / 2) 1rem;
-      padding-right: 2rem;
+      padding-right: 3rem;
       position: sticky;
       top: 0;
       border-radius: 0 0.25rem 0 0;
@@ -41,8 +43,8 @@ main {
       &::after {
         font: var(--fa-font-solid);
         content: "\f00d";
-        position: relative;
-        left: 1rem;
+        position: absolute;
+        right: 1rem;
         color: #bfb9b3;
       }
     }
