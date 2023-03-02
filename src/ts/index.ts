@@ -13,7 +13,7 @@ const setScrollSync = () => {
     return;
   }
   const sectionLeftItems = Array.from(
-    sectionLeft.querySelectorAll(".wrap-record-works"),
+    sectionLeft.querySelectorAll(".wrap-card-works"),
     (e) =>
       [e.getAttribute("data-id"), e] as const satisfies readonly [
         string | null,
