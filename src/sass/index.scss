@@ -152,7 +152,7 @@ main {
     margin-left: -1em;
     padding-left: 1em;
   }
-  .wrap-card {
+  .wrap-record-works {
     min-height: calc(100vh - $topBarHeight - 2em);
     .title-card {
       scroll-snap-align: start;
@@ -178,6 +178,17 @@ main {
     }
   }
 }
+
+.wrap-card {
+  min-height: 8em;
+  border: solid 1px #ccc;
+  padding: 1em;
+  margin: 0.5em;
+  width: calc(100% - 1em);
+  height: auto;
+  overflow: hidden;
+}
+
 #section-works-right {
   overflow: hidden;
   scroll-snap-type: y mandatory;
