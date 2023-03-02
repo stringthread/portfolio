@@ -81,6 +81,14 @@ main {
   border-left: 4px dotted #1b81a8;
   z-index: 0;
 }
+#main-skill-left,
+#main-skill-right {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: var.$titleHeight;
+}
+.title-card-skill {
+  scroll-snap-align: start;
+}
 .main-card {
   margin: 0 1rem 0 4px;
   padding: 0.5rem 0 0.5rem 1rem;
