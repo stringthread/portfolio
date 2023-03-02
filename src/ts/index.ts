@@ -6,8 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const setScrollSync = () => {
-  const sectionLeft = document.getElementById("section-works");
-  const sectionRight = document.getElementById("section-works-right");
+  const sectionLeft = document.getElementById("main-works");
+  const sectionRight = document.getElementById("main-works-right");
   if (!sectionLeft || !sectionRight) {
     console.error("スクロール同期対象の要素がありません");
     return;

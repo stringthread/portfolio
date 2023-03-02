@@ -3,6 +3,8 @@ $fgColor: #bfb9b3;
 $topBarHeight: 2rem;
 $sidebarWidth: 3rem;
 $explorerWidth: 12rem;
+$tabHeight: 2.4rem;
+$titleHeight: 2rem;
 
 * {
   box-sizing: border-box;
@@ -97,21 +99,28 @@ main {
   grid-auto-rows: minmax(calc(100vh - $topBarHeight), auto);
   section {
     position: relative;
+    width: 100%;
     height: 100%;
-    padding-left: 1em;
-    overflow-y: scroll;
+    overflow: hidden;
+    .main-content {
+      height: 100%;
+      padding-left: 1em;
+      overflow-y: scroll;
+    }
     h1,
     h2 {
       display: inline-block;
       background-color: #4c3f34;
       margin: 0;
+      height: $tabHeight;
       font-size: 1em;
-      padding: 0.3em 1em;
+      line-height: 1;
+      padding: calc(($tabHeight - 1em) / 2) 1em;
       padding-right: 2em;
-      margin-left: -1em;
       position: sticky;
       top: 0;
       border-radius: 0 0.25em 0 0;
+      border-bottom: 2px solid $bgColor;
       &::after {
         font: var(--fa-font-solid);
         content: "\f00d";
@@ -122,6 +131,31 @@ main {
     }
   }
 }
+
+.wrap-card {
+  position: relative;
+}
+.title-card,
+#section-works h3 {
+  position: sticky;
+  top: 0;
+  height: $titleHeight;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0;
+  margin-left: -1em;
+  padding: calc(($titleHeight - 1.2rem) / 2) 0;
+  padding-left: 1em;
+  background-color: #464123;
+  border-bottom: solid 2px $bgColor;
+  z-index: 1;
+}
+.period-card {
+  position: relative;
+  top: 0;
+  color: #a69c93;
+}
+
 @keyframes arrow-move {
   from {
     transform: none;
@@ -142,29 +176,19 @@ main {
     transform: none;
   }
 }
-#section-works {
+
+#main-works {
   scroll-snap-type: y mandatory;
-  scroll-padding-top: 4.5em;
-  h3 {
-    position: sticky;
-    top: 2em;
-    background-color: #464123;
-    margin-left: -1em;
-    padding-left: 1em;
+  scroll-padding-top: calc($titleHeight);
+  .title-card {
+    position: static;
+    scroll-snap-align: start;
+    line-height: 1.2;
+    height: auto;
+    min-height: $titleHeight;
   }
-  .wrap-record-works {
-    min-height: calc(100vh - $topBarHeight - 2em);
-    .title-card {
-      scroll-snap-align: start;
-      background-color: #464123;
-      margin-left: -1em;
-      padding-left: 1em;
-    }
-    .period-card {
-      position: relative;
-      top: 0;
-      color: #a69c93;
-    }
+  .wrap-card {
+    min-height: calc(100vh - $tabHeight);
     &:not(.last-card)::after {
       font: var(--fa-font-solid);
       content: "\f078";
@@ -179,27 +203,17 @@ main {
   }
 }
 
-.wrap-card {
-  min-height: 8em;
-  border: solid 1px #ccc;
-  padding: 1em;
-  margin: 0.5em;
-  width: calc(100% - 1em);
-  height: auto;
-  overflow: hidden;
-}
-
-#section-works-right {
+#section-works-right > .main-content {
   overflow: hidden;
   scroll-snap-type: y mandatory;
-  scroll-padding-top: calc($topBarHeight);
+  height: calc(100vh - $topBarHeight - $tabHeight);
   .images-card {
     display: flex;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
     width: 100%;
-    height: calc(100vh - $topBarHeight - 2em);
+    height: 100%;
     margin-bottom: 2em;
   }
   #empty-image-content {
