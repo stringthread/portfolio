@@ -1,5 +1,10 @@
 @use "./variables.scss" as var;
 
+html {
+  font-family: "Ubuntu Mono", "Zen Kaku Gothic New", sans-serif;
+  font-kerning: normal;
+}
+
 main {
   position: relative;
   left: calc(var.$sidebarWidth + var.$explorerWidth);
@@ -79,6 +84,7 @@ main {
   margin-left: 4px;
   margin-bottom: 0;
   border-left: 4px dotted #1b81a8;
+  padding: 0.5em 0;
   z-index: 0;
 }
 #main-skill-left,

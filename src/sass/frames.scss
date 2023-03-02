@@ -43,8 +43,7 @@ body {
   background-color: #3d2e20;
   #top-explorer {
     background-color: #4b3f34;
-    padding: 0;
-    padding-left: 1rem;
+    padding: 0.5em 0 0.5em 1em;
     font-weight: bold;
     font-size: 0.9em;
     &::before {
@@ -57,8 +56,7 @@ body {
   }
   a {
     display: block;
-    padding: 0;
-    padding-left: 2em;
+    padding: 0.3em 0 0.3em 2em;
     color: var.$fgColor;
     text-decoration-line: none;
     &:hover {
