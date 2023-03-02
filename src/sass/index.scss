@@ -1,5 +1,5 @@
 $bgColor: #291e17;
-$fgColor: #bfb9b3;
+$fgColor: #ddd7ce;
 $topBarHeight: 2rem;
 $sidebarWidth: 3rem;
 $explorerWidth: 12rem;
@@ -115,18 +115,18 @@ main {
       height: $tabHeight;
       font-size: 1em;
       line-height: 1;
-      padding: calc(($tabHeight - 1em) / 2) 1em;
-      padding-right: 2em;
+      padding: calc(($tabHeight - 1em) / 2) 1rem;
+      padding-right: 2rem;
       position: sticky;
       top: 0;
-      border-radius: 0 0.25em 0 0;
+      border-radius: 0 0.25rem 0 0;
       border-bottom: 2px solid $bgColor;
       &::after {
         font: var(--fa-font-solid);
         content: "\f00d";
         position: relative;
-        left: 1em;
-        color: #92877c;
+        left: 1rem;
+        color: #bfb9b3;
       }
     }
   }
@@ -134,6 +134,9 @@ main {
 
 .wrap-card {
   position: relative;
+  &:not(:last-child) {
+    margin-bottom: 2em;
+  }
 }
 .title-card,
 #section-works h3 {
@@ -141,11 +144,11 @@ main {
   top: 0;
   height: $titleHeight;
   font-size: 1.2rem;
-  line-height: 1;
+  line-height: 1.25;
   margin: 0;
-  margin-left: -1em;
-  padding: calc(($titleHeight - 1.2rem) / 2) 0;
-  padding-left: 1em;
+  margin-left: -1rem;
+  padding: calc(($titleHeight - 1.25em) / 2) 0;
+  padding-left: 1rem;
   background-color: #464123;
   border-bottom: solid 2px $bgColor;
   z-index: 1;
@@ -183,9 +186,9 @@ main {
   .title-card {
     position: static;
     scroll-snap-align: start;
-    line-height: 1.2;
     height: auto;
     min-height: $titleHeight;
+    font-size: 1em;
   }
   .wrap-card {
     min-height: calc(100vh - $tabHeight);
