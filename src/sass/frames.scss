@@ -57,3 +57,20 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  body {
+    grid-template-columns: var.$sidebarWidth 1fr;
+  }
+  #explorer {
+    position: fixed;
+    top: var.$topBarHeight;
+    left: var.$sidebarWidth;
+    width: var.$explorerWidth;
+    height: calc(100vh - var.$topBarHeight);
+    z-index: 10;
+    &:not(.open) {
+      display: none;
+    }
+  }
+}
