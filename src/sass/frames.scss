@@ -90,7 +90,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1560px) {
+@media screen and (max-width: var.$frameBreakpoint) {
   body {
     grid-template-columns: var.$sidebarWidth 1fr;
   }

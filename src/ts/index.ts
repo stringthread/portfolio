@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const setScrollSync = () => {
+  const page = document.getElementById("page4");
   const sectionLeft = document.getElementById("main-works");
   const sectionRight = document.getElementById("main-works-right");
   if (!sectionLeft || !sectionRight) {
@@ -40,10 +41,28 @@ const setScrollSync = () => {
     () => {
       for (const [k, e] of sectionLeftItems) {
         const clientRect = e.getBoundingClientRect();
-        if (clientRect.top > 0 && clientRect.top < sectionLeft.clientHeight) {
+        if (
+          clientRect.top > 0 &&
+          clientRect.top < sectionLeft.clientHeight / 2
+        ) {
           const syncElement =
             sectionRightItemsMap.get(k) ?? sectionRightItemsMap.get("empty");
           syncElement?.scrollIntoView();
+        }
+      }
+    },
+    false
+  );
+  page?.addEventListener(
+    "scroll",
+    () => {
+      for (const [k, e] of sectionLeftItems) {
+        const clientRect = e.getBoundingClientRect();
+        if (clientRect.top > 0 && clientRect.top < page?.clientHeight / 2) {
+          const syncElement =
+            sectionRightItemsMap.get(k) ?? sectionRightItemsMap.get("empty");
+          syncElement?.scrollIntoView();
+          break;
         }
       }
     },

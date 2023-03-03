@@ -25,7 +25,8 @@
   scroll-snap-type: y mandatory;
   scroll-padding-top: calc(var.$titleHeight);
   .title-card {
-    position: static;
+    position: sticky;
+    top: var.$titleHeight;
     scroll-snap-align: start;
     height: auto;
     min-height: var.$titleHeight;
@@ -127,5 +128,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: var.$frameBreakpoint) {
+  #main-works {
+    scroll-snap-type: y proximity;
+  }
+}
+
+@media screen and (max-width: var.$mainBreakpoint) {
+  #section-works-right {
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    position: fixed;
+    transform: translate(
+      max(11%, calc((100vw - var.$sidebarWidth - 800px) / 2)),
+      11%
+    );
+    border-radius: 0.5rem;
+    z-index: 10;
+    background-color: #5b4f44; // note: only for test
+    #main-works-right {
+      width: 100%;
+      height: 80%;
+      position: relative;
+      top: 10%;
+    }
+    &:not(.open) {
+      display: none;
+    }
   }
 }
