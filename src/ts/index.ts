@@ -122,5 +122,12 @@ window.addEventListener("DOMContentLoaded", () => {
       explorer.classList.toggle("open");
       toggleExplorer.classList.toggle("open");
     });
+    const explorerItems = document.querySelectorAll(".explorer-item");
+    explorerItems.forEach((e) => {
+      e.addEventListener("click", () => {
+        explorer.classList.remove("open");
+        toggleExplorer.classList.remove("open");
+      });
+    });
   }
 });
