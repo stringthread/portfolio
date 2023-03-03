@@ -113,3 +113,6 @@
     color: #d5aaff;
   }
 }
+:where(p) {
+  margin: 0.5em 0;
+}
