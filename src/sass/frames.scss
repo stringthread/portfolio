@@ -60,6 +60,10 @@ body {
   }
 }
 
+#modal-overlay {
+  display: none;
+}
+
 @keyframes wrap-attract-open-explorer {
   from {
     padding-right: 0;
