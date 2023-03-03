@@ -25,9 +25,18 @@ body {
   grid-column: 1;
   background-color: #66492d;
   & .icon-record-contact {
+    width: 1em;
     height: 1em;
     font-size: 2em;
     margin: 0.25em 0;
+  }
+  & .record-contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &:hover {
+      background-color: #8f5d33;
+    }
   }
 }
 #explorer {
