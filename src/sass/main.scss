@@ -54,3 +54,71 @@ main {
     }
   }
 }
+
+#section-about,
+#section-message {
+  .headed-content {
+    padding: 0 1rem;
+    margin-bottom: 3em;
+  }
+}
+#contact-about {
+  position: static;
+  #heading-contact-about {
+    display: block;
+    position: sticky;
+    top: 0;
+    min-height: var.$titleHeight;
+    height: auto;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    padding: max(calc((var.$titleHeight - 1.25em) / 2), 0.4em) 0;
+    padding-left: 1rem;
+    background-color: #464123;
+    border-radius: 0;
+    &::after {
+      content: none;
+    }
+  }
+  .wrap-contact-records {
+    padding: 0.2em 0 0.2em 1.5em;
+    margin: 1em 0 1em 1em;
+    border-left: solid 2px #47413a;
+    position: relative;
+    &::before {
+      content: "{";
+      color: #da70d6;
+      margin-left: -1em;
+    }
+    &::after {
+      content: "}";
+      color: #da70d6;
+      margin-left: -1em;
+    }
+  }
+  .record-contact-about {
+    margin: 0.5rem;
+    & > a {
+      display: inline-block;
+      height: 1.5rem;
+      text-decoration: none;
+      & > * {
+        vertical-align: middle;
+        text-decoration: underline;
+      }
+    }
+    .icon-record-contact {
+      display: inline-block;
+      font-size: 1.5rem;
+      width: 1em;
+      height: 1em;
+      text-decoration: none;
+    }
+    .contact-service {
+      padding-right: 0.3em;
+      &::after {
+        content: ":";
+      }
+    }
+  }
+}
