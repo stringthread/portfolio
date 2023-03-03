@@ -67,4 +67,11 @@ window.addEventListener("DOMContentLoaded", () => {
     },
   });
   setScrollSync();
+  const explorer = document.getElementById("explorer");
+  const toggleExplorer = document.getElementById("toggle-explorer");
+  if (explorer && toggleExplorer) {
+    toggleExplorer.addEventListener("click", () => {
+      explorer.classList.toggle("open");
+    });
+  }
 });
