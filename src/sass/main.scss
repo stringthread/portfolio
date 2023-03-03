@@ -1,10 +1,5 @@
 @use "./variables.scss" as var;
 
-html {
-  font-family: "Ubuntu Mono", "Zen Kaku Gothic New", sans-serif;
-  font-kerning: normal;
-}
-
 main {
   position: relative;
   grid-row: -2;
