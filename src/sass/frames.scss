@@ -85,12 +85,19 @@ body {
     }
   }
   a {
-    display: block;
-    padding: 0.3em 0 0.3em 2em;
+    display: flex;
+    align-items: center;
+    padding: 0.3em 0 0.3em 1em;
     color: var.$fgColor;
     text-decoration-line: none;
     &:hover {
       background-color: #563d0b;
+    }
+    img {
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      padding-right: 0.5em;
     }
   }
 }
