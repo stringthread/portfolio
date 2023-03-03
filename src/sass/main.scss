@@ -5,6 +5,7 @@ main {
   grid-row: -2;
   grid-column: -2;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .page {
@@ -51,12 +52,13 @@ main {
 #section-about,
 #section-message {
   .headed-content {
-    padding: 0 1rem;
+    padding: 1rem;
     margin-bottom: 3em;
   }
 }
 #contact-about {
   position: static;
+  height: auto;
   #heading-contact-about {
     display: block;
     position: sticky;
@@ -111,6 +113,29 @@ main {
       padding-right: 0.3em;
       &::after {
         content: ":";
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .page {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% + var.$titleHeight);
+    overflow-y: auto;
+    &::before {
+      padding-top: var.$titleHeight;
+      margin-top: calc(-1 * var.$titleHeight);
+    }
+    & > section {
+      width: 100%;
+      height: auto;
+      margin-bottom: 2em;
+      overflow: hidden;
+      .main-content {
+        height: auto;
+        overflow: hidden;
       }
     }
   }
