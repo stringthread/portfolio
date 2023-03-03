@@ -90,7 +90,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 996px) and (max-width: 1100px) {
   body {
     grid-template-columns: var.$sidebarWidth 1fr;
   }
@@ -105,31 +105,34 @@ body {
       margin: 0;
       padding: 0;
       border: none;
+      appearance: none;
       background-color: #8f5d33;
-      animation: wrap-attract-open-explorer 2s infinite;
       .humberger {
-        width: var.$topBarHeight;
-        height: var.$topBarHeight;
-        padding: calc(var.$topBarHeight * 0.25);
+        position: relative;
+        width: calc(var.$topBarHeight * 0.5);
+        height: calc(var.$topBarHeight * 0.5);
+        margin: calc(var.$topBarHeight * 0.25);
+        transition: transform 0.4s, opacity 0.4s;
         .bar {
-          display: block;
+          position: absolute;
+          left: 0;
+          transition: transform 0.4s, opacity 0.4s;
+          display: inline-block;
           width: 100%;
           height: 20%;
-          margin: 20% 0;
           background-color: var.$fgColor;
           &:first-of-type {
-            margin-top: 0;
+            top: 0;
           }
           &:nth-of-type(2) {
-            animation: content-attract-open-explorer 2s infinite;
+            top: calc(var.$topBarHeight * 0.25 - 10%);
           }
           &:last-of-type {
-            margin-bottom: 0;
+            bottom: 0;
           }
         }
       }
       .toggle-explorer-text {
-        animation: content-attract-open-explorer 2s infinite;
         padding-right: 1em;
         text-align: center;
         &::after {
@@ -137,6 +140,45 @@ body {
           content: "\f105";
           padding-left: 0.5em;
           vertical-align: text-bottom;
+        }
+      }
+      &.open {
+        .humberger {
+          .bar:first-of-type {
+            margin: 0;
+            transform: translateY(200%) rotate(-45deg);
+          }
+          @keyframes center-bar {
+            100% {
+              height: 0;
+            }
+          }
+          .bar:nth-of-type(2) {
+            position: absolute;
+            top: 40%;
+            opacity: 0;
+            transform: translateX(100%);
+            animation: center-bar 0.4s forwards;
+          }
+          .bar:last-of-type {
+            margin: 0;
+            transform: translateY(-200%) rotate(45deg);
+          }
+        }
+        .toggle-explorer-text {
+          visibility: hidden;
+          &::after {
+            display: inline-block;
+            visibility: visible;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &:not(.open) {
+        animation: wrap-attract-open-explorer 2s 1s infinite;
+        & .toggle-explorer-text,
+        & .bar:nth-of-type(2) {
+          animation: content-attract-open-explorer 2s 1s infinite;
         }
       }
     }

@@ -72,6 +72,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (explorer && toggleExplorer) {
     toggleExplorer.addEventListener("click", () => {
       explorer.classList.toggle("open");
+      toggleExplorer.classList.toggle("open");
     });
   }
 });
