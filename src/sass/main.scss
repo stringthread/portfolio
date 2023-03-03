@@ -56,6 +56,61 @@ main {
     margin-bottom: 3em;
   }
 }
+#photo-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  #photo-reversible {
+    width: 40%;
+    aspect-ratio: 1;
+    img {
+      border-radius: 2em;
+    }
+    .reversible-face::before,
+    .reversible-face::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .reversible-face::before {
+      border-width: 3em 0 0 3em;
+      border-color: transparent transparent transparent var.$fgColor;
+      box-shadow: 0 0 2em var.$bgColor;
+    }
+    .reversible-face::after {
+      border-width: 0 3em 3em 0;
+      border-color: transparent var.$bgColor transparent transparent;
+    }
+  }
+}
+.reversible {
+  position: relative;
+  .front,
+  .back {
+    transition: all 0.6s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .back {
+    transform: rotateY(-180deg);
+  }
+  &:hover {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0);
+    }
+  }
+}
 #contact-about {
   position: static;
   height: auto;
