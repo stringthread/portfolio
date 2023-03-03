@@ -133,31 +133,74 @@
 
 @media screen and (max-width: var.$frameBreakpoint) {
   #main-works {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
   }
 }
 
 @media screen and (max-width: var.$mainBreakpoint) {
-  #section-works-right {
+  #modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 100;
+    &:not(.open) {
+      display: none;
+    }
+  }
+
+  #section-works-right.open {
     width: 90%;
     max-width: 800px;
     height: 90%;
     position: fixed;
     transform: translate(
-      max(11%, calc((100vw - var.$sidebarWidth - 800px) / 2)),
-      11%
+      max(5.5%, calc((100vw - var.$sidebarWidth - 800px) / 2)),
+      5.5%
     );
     border-radius: 0.5rem;
-    z-index: 10;
-    background-color: #5b4f44; // note: only for test
+    z-index: 10000;
+    background-color: #5b4f44;
     #main-works-right {
       width: 100%;
       height: 80%;
       position: relative;
       top: 10%;
     }
-    &:not(.open) {
+  }
+  #section-works-right:not(.open) {
+    width: 12rem;
+    height: 8rem;
+    position: fixed;
+    transform: translate(
+      calc(100vw - var.$sidebarWidth - 100% - 1em),
+      calc(100vh - var.$topBarHeight - 100% - 6rem)
+    );
+    border-radius: 0;
+    z-index: 10;
+    h2 {
       display: none;
+    }
+    #main-works-right {
+      width: 100%;
+      height: 100%;
+      .images-card {
+        & > *:not(.swiper-wrapper):not(#empty-image-content) {
+          display: none !important;
+        }
+        .swiper-slide,
+        .swiper-slide > *,
+        #empty-image-content {
+          width: 100% !important;
+          height: 100% !important;
+          cursor: pointer;
+        }
+        .swiper-slide {
+          background-color: #5b4f44;
+        }
+      }
     }
   }
 }
