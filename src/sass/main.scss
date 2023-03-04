@@ -177,12 +177,8 @@ main {
   .page {
     display: flex;
     flex-wrap: wrap;
-    height: calc(100% + var.$titleHeight);
+    height: 100%;
     overflow-y: auto;
-    &::before {
-      padding-top: var.$titleHeight;
-      margin-top: calc(-1 * var.$titleHeight);
-    }
     & > section {
       width: 100%;
       height: auto;

@@ -6,10 +6,12 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
   grid-template-columns: var.$sidebarWidth var.$explorerWidth 1fr;
   grid-template-rows: var.$topBarHeight 1fr;
   overflow: hidden;
-  scroll-snap-type: y mandatory;
 }
 #topbar {
   grid-row: 1;
