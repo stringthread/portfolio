@@ -6,7 +6,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/ts/index.ts",
+    index: "./src/ts/index.ts",
+    career: "./src/ts/career.ts",
+    skill: "./src/ts/skill.ts",
+    works: "./src/ts/works.ts",
   },
 
   output: {
@@ -30,11 +33,7 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "style.css",
-    }),
-  ],
+  plugins: [new MiniCssExtractPlugin()],
 
   devtool: "source-map",
 

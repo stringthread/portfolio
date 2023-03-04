@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Zen+Kaku+Gothic+New&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./works.css" />
+  <script src="https://kit.fontawesome.com/1b477680cc.js" crossorigin="anonymous"></script>
+  <script src="./works.js"></script>
+  <title>Stringthread Portfolio</title>
+</head>
+
+<body>
+  <header id="topbar">
+    <div id="content-topbar">
+      <span id="title-topbar">Stringthread</span>
+    </div>
+    <button id="toggle-explorer" type="button">
+      <div class="humberger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="toggle-explorer-text">OPEN</div>
+    </button>
+  </header>
+  <aside id="sidebar-contacts">
+    <div class="record-contact">
+      <a href="https://github.com/stringthread">
+        <i class="icon-record-contact fa-brands fa-github" style="color: #ffe7c2"></i>
+      </a>
+    </div>
+    <div class="record-contact">
+      <a href="https://qiita.com/stringthread"><img class="icon-record-contact" src="img/qiita_favicon.png"
+          alt="Qiita" /></a>
+    </div>
+    <div class="record-contact">
+      <a href="https://www.wantedly.com/id/yuitoskt"><img class="icon-record-contact" src="img/wantedly_icon.svg"
+          alt="Wantedly" /></a>
+    </div>
+    <div class="record-contact">
+      <a href="https://www.lancers.jp/profile/yuitoskt"><img class="icon-record-contact" src="img/lancers_favicon.ico"
+          alt="Lancers" /></a>
+    </div>
+    <div class="record-contact">
+      <a href="https://twitter.com/stringthread"><i class="icon-record-contact fa-brands fa-twitter"
+          style="color: #ffe7c2"></i></a>
+    </div>
+  </aside>
+  <aside id="explorer">
+    <div id="top-explorer">CONTENTS LIST</div>
+    <a href="index.html" class="explorer-item"><img src="./img/profile.svg" alt="" /><span>Profile</span></a>
+    <a href="career.html" class="explorer-item"><img src="./img/career.svg" alt="" /><span>Career</span></a>
+    <a href="skill.html" class="explorer-item"><img src="./img/skill.svg" alt="" /><span>Skills</span></a>
+    <a href="works.html" class="explorer-item"><img src="./img/works.svg" alt="" /><span>Works</span></a>
+  </aside>
+  <main>
+    <div class="page" id="page4">
+      <div id="modal-overlay"></div>
+      <section id="section-works">
+        <h2 id="title-works">実績</h2>
+        <div class="main-content" id="main-works">
+          <div class="wrap-category-works">
+            <h3 class="title-category-works">アプリケーション実装</h3>
+            <div class="wrap-card wrap-card-works" data-id="1">
+              <h4 class="title-card title-card-works">e-Flowsheet</h4>
+              <div class="period-card period-card-works">
+                2021/9&nbsp;-&nbsp;2023/2
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  競技ディベートで議論を記録するために最適化されたメモアプリケーションです。論点を入れ子状に管理するほか、反論と対象の関係を記録できます。
+                </p>
+                <ul class="link-works">
+                  <li>
+                    <a href="https://stringthread.github.io/flowsheet/">アプリケーション</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stringthread/flowsheet/">ソースコード</a>
+                  </li>
+                </ul>
+                <div class="tech-stack-works">
+                  <span class="word-tech-stack-works">TypeScript</span>
+                  <span class="word-tech-stack-works">React</span>
+                  <span class="word-tech-stack-works">Redux</span>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="2">
+              <h4 class="title-card title-card-works">Colorful Hexa</h4>
+              <div class="period-card period-card-works">
+                2018/2&nbsp;-&nbsp;2018/11
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  Windows向け音楽ゲーム「Colorful&nbsp;Hexa」を作成しました。2018年にアーケードゲームとして3日間公開し、多数のプレイヤーを迎えることができました。
+                </p>
+                <p>
+                  チームメンバー6名による製作であり、私は筐体・画面デザインとコーディングを担当しました。
+                </p>
+                <ul class="link-works">
+                  <li>
+                    <a href="https://github.com/stringthread/Colorful_Hexa">ソースコード</a>
+                  </li>
+                </ul>
+                <div class="tech-stack-works">
+                  <span class="word-tech-stack-works">C++</span><span class="word-tech-stack-works">Windows</span><span
+                    class="word-tech-stack-works">SDL</span>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="3">
+              <h4 class="title-card title-card-works">
+                Human&nbsp;as&nbsp;a&nbsp;Sensor
+              </h4>
+              <div class="period-card period-card-works">
+                2021/10&nbsp;-&nbsp;2021/11
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  脳波を使用したインスタレーション作品「Human&nbsp;as&nbsp;a&nbsp;Sensor」を制作しました。
+                </p>
+                <p>
+                  コンピュータが与える音声信号に合わせた目の開閉によって脳波刺激を変動させることで画像を描画しています。
+                </p>
+                <p>
+                  本作品では、生成される画像に被験者の意志が介在せず、被験者の主体性が喪失しています。
+                  昨今のデータ駆動型社会において希薄化する人間の主体性への疑義を呈した作品です。
+                </p>
+                <p>
+                  チームメンバー3名による制作で、私はシステム設計・プログラム実装の段階でリーダー的立場を担いました。
+                </p>
+                <ul class="link-works">
+                  <li>
+                    <a href="https://github.com/stringthread/brainwave2021-1">ソースコード</a>
+                  </li>
+                </ul>
+                <div class="tech-stack-works">
+                  <span class="word-tech-stack-works">Processing</span><span
+                    class="word-tech-stack-works">Open&nbsp;Sound&nbsp;Control</span>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="empty">
+              <h4 class="title-card title-card-works">簡易POSシステム</h4>
+              <div class="period-card period-card-works">
+                2017/5&nbsp;-&nbsp;2017/7
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  バーコードを読み取り、金額計算・レシート発行・購入者/購入品目の保存機能を備えた簡易的なPOSシステムです。
+                </p>
+                <p>
+                  出身高校の文化祭運営で少なくとも1年間の運用を行いました。
+                </p>
+                <ul class="link-works">
+                  <li>
+                    <a href="https://github.com/stringthread/POS">ソースコード</a>
+                  </li>
+                </ul>
+                <div class="tech-stack-works">
+                  <span class="word-tech-stack-works">HTML + CSS + JavaScript</span><span
+                    class="word-tech-stack-works">PHP</span><span class="word-tech-stack-works">MySQL</span>
+                </div>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="5">
+              <h4 class="title-card title-card-works">Discord&nbsp;Bot</h4>
+              <div class="period-card period-card-works">
+                2020/6&nbsp;-&nbsp;2020/9
+              </div>
+              <div class="main-card main-card-works">
+                <p>ボイスチャットアプリDiscord上のBot3種を作成しました。</p>
+                <ul class="list-works">
+                  <li>
+                    <span class="name-list-works">Discord&nbsp;TK&nbsp;Bot</span><span
+                      class="description-list-works">ディベート向けの計時機能を備えたBot</span>
+                  </li>
+                  <li>
+                    <span class="name-list-works">Discord&nbsp;Rec</span><span
+                      class="description-list-works">サーバ上に音声を録音するBot</span>
+                  </li>
+                  <li>
+                    <span class="name-list-works">Discord&nbsp;Relay</span><span
+                      class="description-list-works">あるチャンネルの音声を別チャンネルに転送するBot</span>
+                  </li>
+                </ul>
+                <ul class="link-works">
+                  <li>
+                    <a href="https://github.com/stringthread/discord_tk_bot">Discord-TK-Botソースコード</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stringthread/discordRec">Discord&nbsp;Recソースコード</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stringthread/discordRelay">Discord&nbsp;Relayソースコード</a>
+                  </li>
+                  <li>
+                    <a href="https://de-scovery.com/discord-commands">各Bot操作方法ページ</a>（Bot自体は非公開です）
+                  </li>
+                </ul>
+                <div class="tech-stack-works">
+                  <span class="word-tech-stack-works">Node.js</span><span
+                    class="word-tech-stack-works">Python</span><span class="word-tech-stack-works">CentOS7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-category-works" id="design-works">
+            <h3 class="title-category-works">グラフィックデザイン</h3>
+            <div class="wrap-card wrap-card-works" data-id="6">
+              <h4 class="title-card title-card-works">
+                演劇「過ぎ行く日々は透明な白」広報デザイン
+              </h4>
+              <div class="period-card period-card-works">
+                2016/8&nbsp;-&nbsp;2016/10
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  演劇「過ぎ行く日々は透明な白」の広報に用いるポスターや頒布物のデザインを行いました。
+                </p>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="7">
+              <h4 class="title-card title-card-works">
+                動画放映企画「2‣2」ロゴ
+              </h4>
+              <div class="period-card period-card-works">
+                2017/6&nbsp;-&nbsp;2017/9
+              </div>
+              <div class="main-card main-card-works">
+                <p>動画放映企画「2‣2」のロゴを作成しました。</p>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="8">
+              <h4 class="title-card title-card-works">
+                謎解き企画「こまなぞ」
+              </h4>
+              <div class="period-card period-card-works">
+                2018/9&nbsp;-&nbsp;2018/10
+              </div>
+              <div class="main-card main-card-works">
+                <p>謎解き企画「こまなぞ」のデザインを担当しました。</p>
+                <p>ロゴ・冊子・クリアファイルを作成しました</p>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works" data-id="9">
+              <h4 class="title-card title-card-works">
+                音楽ゲーム「Colorful&nbsp;Hexa」ロゴ・画面デザイン
+              </h4>
+              <div class="period-card period-card-works">
+                2018/9&nbsp;-&nbsp;2018/10
+              </div>
+              <div class="main-card main-card-works">
+                <p>
+                  音楽ゲーム「Colorful&nbsp;Hexa」で、ロゴと画面デザインを行いました。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="wrap-category-works" id="research-works">
+            <h3 class="title-category-works">研究実績</h3>
+            <div class="wrap-card wrap-card-works" data-id="10">
+              <h4 class="title-card title-card-works">
+                製品情報のテキストマイニングによる設計開発・保守のナレッジマネジメント（製品不具合のテキストマイニングによる故障事象分類）
+              </h4>
+              <div class="period-card period-card-works">2022/9</div>
+              <div class="main-card main-card-works">
+                <p>
+                  日本機械学会
+                  第32回設計工学・システム部門講演会にて、講演発表を行いました。
+                </p>
+                <p>
+                  自動車の故障情報から取り出した単語の関連性を元に、過去の故障事例をクラスタリングすることで解釈しやすくするための研究を行い、その内容について発表しました。
+                </p>
+                <p class="bibliography">
+                  <span class="bib-authors"><span class="bib-author-me">坂田唯純</span>, 山下雅己, 青山和浩</span><!--
+                  --><span class="bib-title">製品情報のテキストマイニングによる設計開発・保守のナレッジマネジメント（製品不具合のテキストマイニングによる故障事象分類）</span><!--
+                  --><span class="bib-collection"><!--
+                    -->設計工学・システム部門講演会講演論文集<!--
+                    --><span class="bib-issue">2022.32</span><!--
+                  --></span><!--
+                  --><span class="bib-publisher">一般財団法人 日本機械学会</span><!--
+                  --><span class="bib-year">2022</span>
+                </p>
+              </div>
+            </div>
+            <div class="wrap-card wrap-card-works last-card" data-id="11">
+              <h4 class="title-card title-card-works">
+                自動車不具合メカニズムのネットワーク構造化とテキストマイニングによる自動生成
+              </h4>
+              <div class="period-card period-card-works">2023/3</div>
+              <div class="main-card main-card-works">
+                <p>卒業論文</p>
+                <p>
+                  自動車故障のテキストデータから故障メカニズムを抽出し、ネットワーク形式に構造化する手法を研究しました。
+                </p>
+                <p class="bibliography">
+                  <span class="bib-authors"><span class="bib-author-me">坂田唯純</span></span><!--
+                  --><span class="bib-title">自動車不具合メカニズムのネットワーク構造化とテキストマイニングによる自動生成</span><!--
+                  --><span class="bib-collection">2022年度工学部システム創成学科PSIコース卒業論文概要</span><!--
+                  --><span class="bib-publisher">東京大学工学部</span><!--
+                  --><span class="bib-year">2023</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-works-right">
+        <h2>実績 - 画像</h2>
+        <div id="main-works-right" class="main-content">
+          <div class="images-card swiper" data-id="1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/e-Flowsheet.jpg" alt="e-Flowsheet画面サンプル" />
+              </div>
+              <div class="youtube swiper-slide">
+                <iframe width="1280" height="693" src="https://www.youtube.com/embed/Xe7SfJouB7M"
+                  title="e-Flowsheet チュートリアル" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+
+          <div class="images-card swiper" data-id="2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/colorfulHexa画面.png" alt="ColorfulHexa画面サンプル" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/colorfulHexa筐体.jpg" alt="ColorfulHexa筐体サンプル" />
+              </div>
+              <div class="swiper-slide">
+                <div class="twitter-tweet">
+                  <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true"
+                    allowfullscreen="true" class="" title="Twitter Tweet"
+                    src="https://platform.twitter.com/embed/Tweet.html?dnt=false&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfbWl4ZWRfbWVkaWFfMTU4OTciOnsiYnVja2V0IjoidHJlYXRtZW50IiwidmVyc2lvbiI6bnVsbH0sInRmd19leHBlcmltZW50c19jb29raWVfZXhwaXJhdGlvbiI6eyJidWNrZXQiOjEyMDk2MDAsInZlcnNpb24iOm51bGx9LCJ0ZndfZHVwbGljYXRlX3NjcmliZXNfdG9fc2V0dGluZ3MiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3ZpZGVvX2hsc19keW5hbWljX21hbmlmZXN0c18xNTA4MiI6eyJidWNrZXQiOiJ0cnVlX2JpdHJhdGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2xlZ2FjeV90aW1lbGluZV9zdW5zZXQiOnsiYnVja2V0Ijp0cnVlLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfZnJvbnRlbmQiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfX0%3D&frame=false&hideCard=false&hideThread=false&id=1057648294870962177&lang=ja&origin=http%3A%2F%2Flocalhost%3A9000%2F%23page4&sessionId=fa16caa2d4cc03c3d7acfe82ae9f2df99e98d36b&theme=light&widgetsVersion=aaf4084522e3a%3A1674595607486&width=1080px"
+                    data-tweet-id="1057648294870962177"></iframe>
+                </div>
+              </div>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/HaaS_撮影映像.png" alt="Human as a Sensor画像" />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/discordBotIcons.png" alt="Discord Botアイコン" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="6">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/過ぎ行く日々は透明な白_ポスター.jpg" alt="過ぎ行く日々は透明な白 ポスター" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="7">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/2-2_ロゴイメージ.jpg" alt="2-2ロゴ" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/2-2_ムービングロゴ.gif" alt="2-2ムービングロゴ" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="8">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/こまなぞロゴ.jpg" alt="こまなぞロゴ" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/こまなぞファイル.jpg" alt="こまなぞファイル" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="9">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/ColorfulHexaロゴ.jpg" alt="Colorful Hexaロゴ" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/colorfulHexa画面.png" alt="Colorful Hexa画面" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="10">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/JSME_method.png" alt="機械学会論文 手法図" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/JSME_result.png" alt="機械学会論文 結果図" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div class="images-card swiper" data-id="11">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/卒論_method.png" alt="卒業論文 手法図" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/卒論_usage.png" alt="卒業論文 活用法図" />
+              </div>
+              <div class="swiper-slide">
+                <img src="img/卒論_result.png" alt="卒業論文 結果図" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <div id="empty-image-card" class="images-card" data-id="empty">
+            <div id="empty-image-content">No Image...</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
