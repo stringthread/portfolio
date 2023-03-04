@@ -107,6 +107,59 @@
   border-right: solid 2px #a9a098;
 }
 
+.bibliography {
+  color: #aea08c;
+  margin-top: 1em;
+  margin-left: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  & > * {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+  .bib-authors {
+    .bib-author-me {
+      font-weight: bolder;
+    }
+    &::after {
+      content: ".";
+    }
+  }
+  .bib-title {
+    &::before {
+      content: "“";
+    }
+    &::after {
+      content: "”.";
+    }
+  }
+  .bib-collection {
+    font-style: italic;
+    &::after {
+      content: ".";
+    }
+  }
+  .bib-issue {
+    font-style: normal;
+    &::before {
+      content: ",";
+      margin-right: 0.5em;
+    }
+  }
+  .bib-publisher {
+    &::after {
+      content: ",";
+    }
+  }
+  .bib-year {
+    &::after {
+      content: ".";
+    }
+  }
+}
+
 #section-works-right > .main-content {
   overflow: hidden;
   scroll-snap-type: y mandatory;
