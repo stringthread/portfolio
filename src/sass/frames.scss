@@ -92,8 +92,11 @@ body {
     padding: 0.3em 0 0.3em 1em;
     color: var.$fgColor;
     text-decoration-line: none;
-    &:hover {
+    &.current {
       background-color: #563d0b;
+    }
+    &:hover:not(.current) {
+      background-color: #513a0b;
     }
     img {
       display: inline-block;
