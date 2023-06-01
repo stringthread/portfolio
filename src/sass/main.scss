@@ -111,10 +111,10 @@ main {
     }
   }
 }
-#contact-about {
-  position: static;
-  height: auto;
-  #heading-contact-about {
+.inner-section {
+  position: static !important;
+  height: auto !important;
+  .inner-heading {
     display: block;
     position: sticky;
     top: 0;
@@ -130,6 +130,8 @@ main {
       content: none;
     }
   }
+}
+#contact-about {
   .wrap-contact-records {
     padding: 0.2em 0 0.2em 1.5em;
     margin: 1em 0 1em 1em;
